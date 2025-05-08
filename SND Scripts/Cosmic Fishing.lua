@@ -133,7 +133,9 @@ while true do
             missionExecuted = true
         end
         yield("/wait 0.5")
-        if GetCharacterCondition(43) then
+
+        if not GetCharacterCondition(43) then
+            
             Report()
         end
     end

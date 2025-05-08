@@ -59,7 +59,16 @@ require('Ferret/CosmicExploration/Library')
 
 Ferret = FerretCore("Koi's Test")
 
-
+function Report()
+    Addons.WKSHud:wait_until_ready()
+    Addons.WKSMission:graceful_open()
+    if not Addons.WKSMission:is_ready() then
+        Addons.WKSMissionInfomation:report()
+        Addons.WKSMissionInfomation:wait_until_not_ready()
+        return true
+    end
+    return false
+end
 
 function isMissionInToDoList(mission)
     for _, todo in ipairs(ToDoList) do
@@ -124,8 +133,14 @@ while true do
             missionExecuted = true
         end
         yield("/wait 0.5")
+        if GetCharacterCondition(43) then
+            Report()
+        end
     end
 
     missionExecuted = false
 
 end
+
+
+

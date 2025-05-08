@@ -41,6 +41,7 @@
 
 local ToDoList = {
     { missionName = "A-1: Aquatic Inspection I" },
+    { missionName = "A-1: Aetherochemical Samples I"}
 }
 
 --[[

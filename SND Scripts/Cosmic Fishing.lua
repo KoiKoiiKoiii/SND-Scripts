@@ -23,7 +23,7 @@
 
 
   Plugins that are used are:
-  -> Ferret's Library 
+  -> Ferret's Library : https://github.com/OhKannaDuh/Ferret/
   -> Something Need Doing [Expanded Edition] : https://puni.sh/api/repository/croizat
   -> AutoHook
     -> You'll need presets named after the mission names in the ToDoList table.
